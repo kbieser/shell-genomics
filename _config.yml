@@ -74,3 +74,5 @@ exclude:
 highlighter: false
 
 remote_theme: carpentries/carpentries-theme
+
+theme: jekyll-theme-cayman
