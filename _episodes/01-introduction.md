@@ -221,7 +221,7 @@ sra_metadata/  untrimmed_fastq/
 ~~~
 {: .output}
 
-Anything with a "/" after it is a directory. Things with a "*" after them are programs. If
+Anything with a "/" after it is a directory. Things with a `*` after them are programs. If
 there are no decorations, it's a file.
 
 `ls` has lots of other options. To find out what they are, we can type:
