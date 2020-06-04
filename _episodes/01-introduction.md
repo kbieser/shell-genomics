@@ -48,7 +48,7 @@ through a shell.
 
 In this lesson you will learn how to use the command line interface to move around in your file system.
 
-## How to access the shell
+## How to access the shell - NEED TO EDIT THIS SECTION
 
 On a Mac or Linux machine, you can access a shell through a program called Terminal, which is already available
 on your computer. If you're using Windows, you'll need to download a separate program to access the shell.
@@ -167,7 +167,7 @@ $ pwd
 {: .output}
 
 Let's look at how our file system is organized. We can see what files and subdirectories are in this directory by running `ls`,
-which stands for "listing":
+which stands for "listing" or "list stuff":
 
 ~~~
 $ ls
