@@ -70,7 +70,7 @@ exercises. The password will be the same for everyone.
 
 After logging in, you will see a screen showing something like this:
 
-~~~
+~~~bash
 Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-48-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com/
