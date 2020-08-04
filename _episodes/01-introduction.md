@@ -48,66 +48,31 @@ through a shell.
 
 In this lesson you will learn how to use the command line interface to move around in your file system.
 
-## How to access the shell - NEED TO EDIT THIS SECTION
+## How to access the shell
 
 On a Mac or Linux machine, you can access a shell through a program called Terminal, which is already available
-on your computer. If you're using Windows, you'll need to download a separate program to access the shell.
+on your computer. If you're using Windows, you'll need to download a separate program to access the shell or use Windows PowerShell. The problem with these methods are that they require you to access a remote server which often costs money paid by you, the institution, or a granting agency. Instead, this course has been developed using the CyVerse Discovery Environment which will allow us free access to a terminal and server.   
 
 We will spend most of our time learning about the basics of the shell
 by manipulating some experimental data. Some of the data we're going to be working with is quite large, and
 we're also going to be using several bioinformatic packages in later
 lessons to work with this data. To avoid having to spend time
 downloading the data and downloading and installing all of the software,
-we're going to be working with data on a remote server.
+we're going to be working with data on a remote server already stored for you in our Discovery Environment app.
 
-You can log-in to the remote server using the instructions
-[here](http://www.datacarpentry.org/cloud-genomics/02-logging-onto-cloud/#logging-onto-a-cloud-instance).
-Your instructor will supply the `ip_address` and password that you need to login.
+You will need to create an account on CyVerse: https://cyverse.org/
 
-Each of you will have a different `ip_address`. This will
+![Link to cyverse image](cyverse entry.jpg)
+
+Each of you will have your own username and password. This will
 prevent us from accidentally changing each other's files as we work through the
-exercises. The password will be the same for everyone.
+exercises.
 
-After logging in, you will see a screen showing something like this:
+After logging in, you will see a screen showing showing three different services we can utilize. Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
 
-~~~bash
-Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-48-generic x86_64)
+##INSERT IMAGES
 
- * Documentation:  https://help.ubuntu.com/
-
-  System information as of Sat Feb  2 00:08:17 UTC 2019
-
-  System load: 0.0                Memory usage: 5%   Processes:       82
-  Usage of /:  29.9% of 98.30GB   Swap usage:   0%   Users logged in: 0
-
-  Graph this data and manage this system at:
-    https://landscape.canonical.com/
-
-  Get cloud support with Ubuntu Advantage Cloud Guest:
-    http://www.ubuntu.com/business/services/cloud
-
-597 packages can be updated.
-444 updates are security updates.
-
-New release '16.04.5 LTS' available.
-Run 'do-release-upgrade' to upgrade to it.
-
-
-Last login: Fri Feb  1 22:34:53 2019 from c-73-116-43-163.hsd1.ca.comcast.net
-~~~
-{: .output}
-
-This provides a lot of information about the remote server that you're logging in to. We're not going to use most of this information for
-our workshop, so you can clear your screen using the `clear` command.
-
-~~~
-$ clear
-~~~
-{: .bash}
-
-This will scroll your screen down to give you a fresh screen and will make it easier to read.
-You haven't lost any of the information on your screen. If you scroll up, you can see everything that has been output to your screen
-up until this point.
+##INSERT NAVIGATION TO THE APP AND LAUNCHING THE ANALYSES. WRITE THAT THIS CAN TAKE SOME TIME SO DO SO BEFORE CLASS EVERYDAY. NEED TO BE NAVIGATED INTO THE TERMINAL
 
 > ## Tip
 >
@@ -132,7 +97,7 @@ Several commands are frequently used to create, inspect, rename, and delete file
 > into your shell, followed by pressing the <kbd>Enter</kbd> key,
 > your window should look like our example in this lesson.  
 > This isn't necessary to follow along (in fact, your prompt may have
-> other helpful information you want to know about).  This is up to you!  
+> other helpful information you want to know about).  This is up to you! Close your terminal and re-open to restore > terminal back to the original settings.  
 {: .callout}
 
 ~~~
@@ -153,7 +118,7 @@ i.e.,
 the directory that the computer assumes we want to run commands in,
 unless we explicitly specify something else.
 Here,
-the computer's response is `/home/dcuser`,
+the computer's response is `/home/gea_user`,
 which is the top level directory within our cloud system:
 
 ~~~
@@ -162,7 +127,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/home/dcuser
+/home/gea_user
 ~~~
 {: .output}
 
@@ -175,20 +140,33 @@ $ ls
 {: .bash}
 
 ~~~
-R  r_data  shell_data
+data  downloads.stderr.log  downloads.stdout.log
 ~~~
 {: .output}
 
 `ls` prints the names of the files and directories in the current directory in
 alphabetical order,
 arranged neatly into columns.
-We'll be working within the `shell_data` subdirectory, and creating new subdirectories, throughout this workshop.  
 
 The command to change locations in our file system is `cd`, followed by a
 directory name to change our working directory.
 `cd` stands for "change directory".
 
-Let's say we want to navigate to the `shell_data` directory we saw above.  We can
+Let's say we want to navigate to the `data` directory where we will find our subdirectory's.
+
+~~~
+$ cd data
+~~~
+{: .bash}
+
+~~~
+Persistence_Notebook-KB.ipynb  shell_data
+~~~
+{: .output}
+
+We'll be working within the `shell_data` subdirectory, and creating new subdirectories, throughout this class. We will use the `Persistence_Notebook-KB.ipynb` to save our work from class to class which will be explained later.   
+
+For now, let's navigate to the `shell_data` directory we saw above.  We can
 use the following command to get there:
 
 ~~~
