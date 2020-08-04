@@ -50,7 +50,7 @@ In this lesson you will learn how to use the command line interface to move arou
 
 ## How to access the shell
 
-Login into CyVerse and launch the DataCarpenty_Bieser app. Open the Persistence_Notebook,run the first cell, and login to irods prior to beginning any work.
+Login into CyVerse and launch the DataCarpenty_Bieser app. Open the Persistence_Notebook, run the first cell, and login to irods prior to beginning any work.
 
 ## Navigating your file system
 
@@ -245,7 +245,6 @@ lot of time and it's easy to make typing mistakes. Instead we can use tab comple
 as a shortcut. When you start typing out the name of a directory or file, then
 hit the <kbd>Tab</kbd> key, the shell will try to fill in the rest of the
 directory or file name.
-
 
 Return to your home directory:
 
