@@ -72,9 +72,11 @@ After logging in, you will see a screen showing showing three different services
 
 Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
 
-##INSERT IMAGES
+![Image of Discovery Environment Entry page](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/deentry.png)
 
-##INSERT NAVIGATION TO THE APP AND LAUNCHING THE ANALYSES. WRITE THAT THIS CAN TAKE SOME TIME SO DO SO BEFORE CLASS EVERYDAY. NEED TO BE NAVIGATED INTO THE TERMINAL
+Once you reach the CyVerse Discovery Environment display, click on the _Apps_ button. I will need to add you to our class team, but once added search for _DataCarpentry_Bieser_ and click _Launch Analysis_. Once you launch the _App_ you need to go back and click on the _Analyses_ button. The app you launched should appear. Move your mouse over the square with the arrow which will say _Go to analysis_ and click it. This next step can take some time especially if you are the first to launch the app that day. Be patient. When the app has loaded you should see this page which lets you know you have successfully launched the app. If possible, launch your app everyday before class starts.
+
+![Image of JupyterLab Entry page](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/jupyterentry.png)
 
 > ## Tip
 >
