@@ -62,6 +62,8 @@ we're going to be working with data on a remote server already stored for you in
 
 You will need to create an account on CyVerse: https://cyverse.org/
 
+[Link to cyverse image](cyverse_entry.jpg)
+
 ![Link to cyverse image](cyverse_entry.jpg)
 
 Each of you will have your own username and password. This will
