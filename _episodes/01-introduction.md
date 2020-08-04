@@ -68,7 +68,7 @@ exercises.
 
 After logging in, you will see a screen showing showing three different services we can utilize.
 
-![Image of CyVerse User Portal](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/cyverseoptions.png)
+![Image of CyVerse User Portal](cyverseoptions.png)
 
 Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
 
