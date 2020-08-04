@@ -60,7 +60,7 @@ lessons to work with this data. To avoid having to spend time
 downloading the data and downloading and installing all of the software,
 we're going to be working with data on a remote server already stored for you in our Discovery Environment app.
 
-You will need to create an account on CyVerse: <https://cyverse.org/>
+[First, you will need to create an account on CyVerse by clicking this link](https://cyverse.org/)
 
 ![Image of CyVerse entry page](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/cyverse_entry.jpg "CyVerse entry page")
 
