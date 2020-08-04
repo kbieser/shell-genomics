@@ -51,7 +51,7 @@ In this lesson you will learn how to use the command line interface to move arou
 ## How to access the shell
 
 On a Mac or Linux machine, you can access a shell through a program called Terminal, which is already available
-on your computer. If you're using Windows, you'll need to download a separate program to access the shell or use Windows PowerShell. The problem with these methods are that they require you to access a remote server which often costs money paid by you, the institution, or a granting agency. Instead, this course has been developed using the CyVerse Discovery Environment which will allow us free access to a terminal and server.   
+on your computer. If you're using Windows, you'll need to download a separate program to access the shell or use Windows PowerShell. The problem with these methods are that they require you to access a remote server which often costs money paid by you, the institution, or a granting agency. Instead, this course has been developed using the _CyVerse Discovery Environment_ which will allow us **free** access to a terminal and server. Functionally, each method works the same.   
 
 We will spend most of our time learning about the basics of the shell
 by manipulating some experimental data. Some of the data we're going to be working with is quite large, and
@@ -60,9 +60,9 @@ lessons to work with this data. To avoid having to spend time
 downloading the data and downloading and installing all of the software,
 we're going to be working with data on a remote server already stored for you in our Discovery Environment app.
 
-You will need to create an account on CyVerse: https://cyverse.org/
+You will need to create an account on CyVerse: <https://cyverse.org/>
 
-![Image of CyVerse entry page](myimages/cyverse_entry.jpg)
+![Image of CyVerse entry page](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/cyverse_entry.jpg)
 
 Each of you will have your own username and password. This will
 prevent us from accidentally changing each other's files as we work through the
