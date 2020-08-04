@@ -62,13 +62,15 @@ we're going to be working with data on a remote server already stored for you in
 
 [First, you will need to create an account on CyVerse by clicking this link](https://cyverse.org/)
 
-![Image of CyVerse entry page](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/cyverse_entry.jpg "CyVerse entry page")
-
 Each of you will have your own username and password. This will
 prevent us from accidentally changing each other's files as we work through the
 exercises.
 
-After logging in, you will see a screen showing showing three different services we can utilize. Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
+After logging in, you will see a screen showing showing three different services we can utilize.
+
+![Image of CyVerse User Portal](https://github.com/kbieser/shell-genomics/tree/gh-pages/_episodes/myimages/cyverseoptions.png)
+
+Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
 
 ##INSERT IMAGES
 
