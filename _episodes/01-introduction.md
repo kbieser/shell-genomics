@@ -50,38 +50,7 @@ In this lesson you will learn how to use the command line interface to move arou
 
 ## How to access the shell
 
-On a Mac or Linux machine, you can access a shell through a program called Terminal, which is already available
-on your computer. If you're using Windows, you'll need to download a separate program to access the shell or use Windows PowerShell. The problem with these methods are that they require you to access a remote server which often costs money paid by you, the institution, or a granting agency. Instead, this course has been developed using the _CyVerse Discovery Environment_ which will allow us **free** access to a terminal and server. Functionally, each method works the same.   
-
-We will spend most of our time learning about the basics of the shell
-by manipulating some experimental data. Some of the data we're going to be working with is quite large, and
-we're also going to be using several bioinformatic packages in later
-lessons to work with this data. To avoid having to spend time
-downloading the data and downloading and installing all of the software,
-we're going to be working with data on a remote server already stored for you in our Discovery Environment app.
-
-[First, you will need to create an account on CyVerse by clicking this link.](https://cyverse.org/)
-
-Each of you will have your own username and password. This will
-prevent us from accidentally changing each other's files as we work through the
-exercises.
-
-After logging in, you will see a screen showing showing three different services we can utilize.
-
-![Image of CyVerse User Portal](https://github.com/kbieser/shell-genomics/blob/gh-pages/_episodes/myimages/cyverseoptions.png)
-
-Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
-
-![Image of Discovery Environment Entry page](https://github.com/kbieser/shell-genomics/blob/gh-pages/_episodes/myimages/deentry.png)
-
-Once you reach the CyVerse Discovery Environment display, click on the _Apps_ button. I will need to add you to our class team, but once added search for _DataCarpentry_Bieser_ and click _Launch Analysis_. Once you launch the _App_ you need to go back and click on the _Analyses_ button. The app you launched should appear. Move your mouse over the square with the arrow which will say _Go to analysis_ and click it. This next step can take some time especially if you are the first to launch the app that day. Be patient. When the app has loaded you should see this page which lets you know you have successfully launched the app. If possible, launch your app everyday before class starts.
-
-![Image of JupyterLab Entry page](https://github.com/kbieser/shell-genomics/blob/gh-pages/_episodes/myimages/jupyterentry.png)
-
-> ## Tip
->
-> If you like to use hot-key combinations you might be interested to know that clearing the console can also be achieved by pressing `Ctrl+L`. Feel free to try it and see for yourself.
-{: .callout}
+Login into CyVerse and launch the DataCarpenty_Bieser app. Open the Persistence_Notebook,run the first cell, and login to irods prior to beginning any work.
 
 ## Navigating your file system
 
@@ -101,7 +70,7 @@ Several commands are frequently used to create, inspect, rename, and delete file
 > into your shell, followed by pressing the <kbd>Enter</kbd> key,
 > your window should look like our example in this lesson.  
 > This isn't necessary to follow along (in fact, your prompt may have
-> other helpful information you want to know about).  This is up to you! Close your terminal and re-open to restore > terminal back to the original settings.  
+> other helpful information you want to know about).  This is up to you! Close your terminal and re-open to restore the terminal back to the original settings.  
 {: .callout}
 
 ~~~
@@ -168,7 +137,7 @@ Persistence_Notebook-KB.ipynb  shell_data
 ~~~
 {: .output}
 
-We'll be working within the `shell_data` subdirectory, and creating new subdirectories, throughout this class. We will use the `Persistence_Notebook-KB.ipynb` to save our work from class to class which will be explained later.   
+We'll be working within the `shell_data` subdirectory, and creating new subdirectories, throughout this class. We will use the `Persistence_Notebook-KB.ipynb` to save our work from class to class which was introduced in the getting started lesson.   
 
 For now, let's navigate to the `shell_data` directory we saw above.  We can
 use the following command to get there:
@@ -231,8 +200,8 @@ to quit.
 > >
 > > ~~~
 > > total 8
-> > drwxr-x--- 2 dcuser dcuser 4096 Jul 30  2015 sra_metadata
-> > drwxr-xr-x 2 dcuser dcuser 4096 Nov 15  2017 untrimmed_fastq
+> > drwxr-sr-x 2 gea_user gea_user 37 Aug  3 23:24 sra_metadata
+> > drwxr-sr-x 2 gea_user gea_user 64 Aug  3 23:24 untrimmed_fastq
 > > ~~~
 > > {: .output}
 > >
@@ -260,9 +229,14 @@ SRR097977.fastq  SRR098026.fastq
 ~~~
 {: .output}
 
-This directory contains two files with `.fastq` extensions. FASTQ is a format
+This directory contains two files with `.fastq` extensions. Notice there is no trailing slash which lets us know that these are files and not directories. FASTQ is a format
 for storing information about sequencing reads and their quality.
 We will be learning more about FASTQ files in a later lesson.
+
+> ## Tip
+>
+> If you like to use hot-key combinations you might be interested to know that clearing the console can be achieved by pressing `Ctrl+L`. Feel free to try it and see for yourself. Alternatively, you can type the command `clear` and it will also clear your console.
+{: .callout}
 
 ### Shortcut: Tab Completion
 
@@ -271,6 +245,7 @@ lot of time and it's easy to make typing mistakes. Instead we can use tab comple
 as a shortcut. When you start typing out the name of a directory or file, then
 hit the <kbd>Tab</kbd> key, the shell will try to fill in the rest of the
 directory or file name.
+
 
 Return to your home directory:
 
@@ -282,17 +257,23 @@ $ cd
 then enter:
 
 ~~~
-$ cd she<tab>
+$ cd da<tab>
 ~~~
 {: .bash}
 
 The shell will fill in the rest of the directory name for
-`shell_data`.
+`data`.
+
+Let's use tab again to get to our `shell_data` directory.
+
+~~~
+$ cd she<tab>
+~~~
+{: .bash}
 
 Now change directories to `untrimmed_fastq` in `shell_data`
 
 ~~~
-$ cd shell_data
 $ cd untrimmed_fastq
 ~~~
 {: .bash}
@@ -301,11 +282,17 @@ Using tab complete can be very helpful. However, it will only autocomplete
 a file or directory name if you've typed enough characters to provide
 a unique identifier for the file or directory you are trying to access.
 
+> ## Tip
+>
+> If you are hitting tab and the file or directory name is not auto-filling, you may be in the wrong directory. Tab completion will only work if you are in the correct location. Using the tab key is often useful in helping to troubleshoot and understand where you are located.
+{: .callout}
+
 If we navigate back to our `untrimmed_fastq` directory and try to access one
 of our sample files:
 
 ~~~
 $ cd
+$ cd data
 $ cd shell_data
 $ cd untrimmed_fastq
 $ ls SR<tab>
@@ -349,5 +336,5 @@ a GUI as it allows us to work on a remote server, carry out the same set of oper
 on a large number of files quickly, and opens up many opportunities for using
 bioinformatic software that is only available in command line versions.
 
-In the next few episodes, we'll be expanding on these skills and seeing how
+In the next few classes, we'll be expanding on these skills and seeing how
 using the command line shell enables us to make our workflow more efficient and reproducible.
