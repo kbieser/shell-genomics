@@ -60,7 +60,7 @@ lessons to work with this data. To avoid having to spend time
 downloading the data and downloading and installing all of the software,
 we're going to be working with data on a remote server already stored for you in our Discovery Environment app.
 
-[First, you will need to create an account on CyVerse by clicking this link](https://cyverse.org/)
+[First, you will need to create an account on CyVerse by clicking this link.](https://cyverse.org/)
 
 Each of you will have your own username and password. This will
 prevent us from accidentally changing each other's files as we work through the
@@ -68,7 +68,7 @@ exercises.
 
 After logging in, you will see a screen showing showing three different services we can utilize.
 
-![Image of CyVerse User Portal](cyverseoptions.png)
+![Image of CyVerse User Portal](cyverseoptions.png?raw=true)
 
 Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
 
