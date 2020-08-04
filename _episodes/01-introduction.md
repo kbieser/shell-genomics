@@ -1,7 +1,7 @@
 ---
 title: "Introducing the Shell"
-teaching: 20
-exercises: 10
+teaching:
+exercises:
 questions:
 - "What is a command shell and why would I use one?"
 - "How can I move around on my computer?"
@@ -62,7 +62,7 @@ we're going to be working with data on a remote server already stored for you in
 
 You will need to create an account on CyVerse: https://cyverse.org/
 
-![Link to cyverse image](cyverse entry.jpg)
+![Link to cyverse image](cyverse entry.png)
 
 Each of you will have your own username and password. This will
 prevent us from accidentally changing each other's files as we work through the
