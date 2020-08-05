@@ -312,7 +312,7 @@ directory:
 
 ~~~
 $ cd
-$ cd shell_data
+$ cd data/shell_data
 ~~~
 {: .bash}
 
@@ -324,7 +324,7 @@ $ ls ~
 {: .bash}
 
 ~~~
-R  r_data  shell_data
+data  downloads.stderr.log  downloads.stdout.log
 ~~~
 {: .output}
 

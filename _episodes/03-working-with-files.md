@@ -1,7 +1,7 @@
 ---
 title: "Working with Files and Directories"
-teaching: 30
-exercises: 15
+teaching:
+exercises:
 questions:
 - "How can I view and search file contents?"
 - "How can I create, copy and delete files and directories?"
@@ -32,7 +32,7 @@ have two results files, which are stored in our `untrimmed_fastq` directory.
 Navigate to your `untrimmed_fastq` directory:
 
 ~~~
-$ cd ~/shell_data/untrimmed_fastq
+$ cd ~/data/shell_data/untrimmed_fastq
 ~~~
 {: .bash}
 
@@ -74,7 +74,7 @@ $ ls /usr/bin/*.sh
 {: .bash}
 
 ~~~
-/usr/bin/amuFormat.sh  /usr/bin/gettext.sh  /usr/bin/gvmap.sh
+/usr/bin/gettext.sh  
 ~~~
 {: .output}
 
@@ -97,7 +97,7 @@ Lists every file in `/usr/bin` that ends in the characters `.sh`.
 {: .callout}
 
 > ## Exercise
-> Do each of the following tasks from your current directory using a single
+> Do each of the following tasks from your current directory (`untrimmed_fastq`) using a single
 > `ls` command for each:
 >
 > 1.  List all of the files in `/usr/bin` that start with the letter 'c'.
@@ -239,14 +239,14 @@ This will print out all of the contents of the `SRR098026.fastq` to the screen.
 
 > ## Exercise
 >
-> 1. Print out the contents of the `~/shell_data/untrimmed_fastq/SRR097977.fastq` file. What is the last line of the file?
+> 1. Print out the contents of the `~/data/shell_data/untrimmed_fastq/SRR097977.fastq` file. What is the last line of the file?
 > 2.  From your home directory, and without changing directories,
 > use one short command to print the contents of all of the files in
-> the `~/shell_data/untrimmed_fastq` directory.
+> the `~/data/shell_data/untrimmed_fastq` directory.
 >
 > > ## Solution
 > > 1. The last line of the file is `C:CCC::CCCCCCCC<8?6A:C28C<608'&&&,'$`
-> > 2. `cat ~/shell_data/untrimmed_fastq/*`
+> > 2. `cat ~/data/shell_data/untrimmed_fastq/*`
 > {: .solution}
 {: .challenge}
 
@@ -534,7 +534,7 @@ $ ls -l
 {: .bash}
 
 ~~~
--rw-r--r-- 1 dcuser dcuser 43332 Nov 15 23:02 SRR098026-backup.fastq
+-rw-r--r-- 1 gea_user gea_user 43332 Nov 15 23:02 SRR098026-backup.fastq
 ~~~
 {: .output}
 
@@ -560,7 +560,7 @@ $ ls -l
 {: .bash}
 
 ~~~
--r--r--r-- 1 dcuser dcuser 43332 Nov 15 23:02 SRR098026-backup.fastq
+-r--r--r-- 1 gea_user gea_user 43332 Nov 15 23:02 SRR098026-backup.fastq
 ~~~
 {: .output}
 
@@ -621,8 +621,8 @@ you will be asked whether you want to override your permission settings.
 > > It's always a good idea to check your work with `ls -l backup`. You should see something like:
 > >
 > > ~~~
-> > -r--r--r-- 1 dcuser dcuser 47552 Nov 15 23:06 SRR097977-backup.fastq
-> > -r--r--r-- 1 dcuser dcuser 43332 Nov 15 23:06 SRR098026-backup.fastq
+> > -r--r--r-- 1 gea_user gea_user 47552 Nov 15 23:06 SRR097977-backup.fastq
+> > -r--r--r-- 1 gea_user gea_user 43332 Nov 15 23:06 SRR098026-backup.fastq
 > > ~~~
 > > {: .output}
 > {: .solution}
