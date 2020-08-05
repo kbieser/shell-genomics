@@ -110,6 +110,6 @@ Running recursive pre-scan... pre-scan complete... transferring data...
 
 You can leave the app running for 48 hours at which point it will automatically be cancelled. For safety, return to Analyses where you launched the app, and click on the three dots to the right of the _Running_ icon. Click on _Complete and Save Outputs_. This saves the session and will allow you to relaunch from your data each subsequent session.
 
-![Image of saving session after class](img/closesession.png)
+![Image of saving session after class](./img/closesession.png)
 
 ## Launching the app after a Data Persistence save
