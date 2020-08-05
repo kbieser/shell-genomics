@@ -79,7 +79,7 @@ The last step is to click the _Terminal_ button on the bottom left under _Other_
 
 After a few lessons, we will want to save our work from one class to the next. To do this, a _Data Persistence Jupyter notebook_ was created. At the beginning of every class, you will want to open this notebook. To do so, first click the small _data_ link and then click on _Peristence_Notebook-KB.ipynb_ which will open a new tab that is the notebook. This notebook contains commands that will allow us to save data if we run then properly.
 
-![Image of Data Persistence Jupyter Notebook](https://github.com/kbieser/shell-genomics/blob/gh-pages/_episodes/myimages/datapersistence.png)
+![Image of Data Persistence Jupyter Notebook](_episodes/myimages/datapersistence.png)
 
 A Jupyter notebook functions much like a terminal. Each section of commands is run in a cell. For our notebook, there are 2 cells that will need to be run. The first cell creates a directory so that each student will save their own data to their username. The first cell must be run at the beginning of each class. You run a cell by clicking in the cell and hitting the play button at the top of the notebook. After hitting play, switch to your terminal. Continue to follow the directions in the notebook until you reach cell 2.
 
@@ -110,6 +110,6 @@ Running recursive pre-scan... pre-scan complete... transferring data...
 
 You can leave the app running for 48 hours at which point it will automatically be cancelled. For safety, return to Analyses where you launched the app, and click on the three dots to the right of the _Running_ icon. Click on _Complete and Save Outputs_. This saves the session and will allow you to relaunch from your data each subsequent session.
 
-![Image of saving session after class](shell-genomics/img/closesession.png)
+![Image of saving session after class](_episodes/img/closesession.png)
 
 ## Launching the app after a Data Persistence save
