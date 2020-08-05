@@ -1,7 +1,7 @@
 ---
 title: "Navigating Files and Directories"
-teaching: 30
-exercises: 20
+teaching:
+exercises:
 questions:
 - "How can I perform operations on files outside of my working directory?"
 - "What are some navigational shortcuts I can use to make my work more efficient?"
@@ -29,6 +29,7 @@ you're not already there.
 
 ~~~
 $ cd
+$ cd data
 $ cd shell_data
 $ cd untrimmed_fastq
 ~~~
@@ -49,7 +50,7 @@ $ cd shell_data
 
 Your computer looked for a directory or file called `shell_data` within the
 directory you were already in. It didn't know you wanted to look at a directory level
-above the one you were located in.
+above the one you were located in. Another clue is that if you tried to use tab completion you would have noticed it didn't work.
 
 We have a special command to tell the computer to move us back or up one directory level.
 
@@ -68,7 +69,7 @@ $ pwd
 {: .bash}
 
 ~~~
-/home/dcuser/shell_data
+/home/gea_user/data/shell_data
 ~~~
 {: .output}
 
@@ -152,10 +153,10 @@ By default, the `ls` commands lists the contents of the working
 directory (i.e. the directory you are in). You can always find the
 directory you are in using the `pwd` command. However, you can also
 give `ls` the names of other directories to view. Navigate to your
-home directory if you are not already there.
+data directory if you are not already there.
 
 ~~~
-$ cd
+$ cd ../../
 ~~~
 {: .bash}
 
@@ -179,7 +180,6 @@ The `cd` command works in a similar way.
 Try entering:
 
 ~~~
-$ cd
 $ cd shell_data/untrimmed_fastq
 ~~~
 {: .bash}
@@ -196,6 +196,7 @@ the intermediate directory.
 > >
 > > ~~~
 > > $ cd
+> > $ cd data
 > > $ ls shell_data/untrimmed_fastq/
 > > ~~~
 > > {: .bash}
@@ -226,21 +227,21 @@ $ pwd
 You will see:
 
 ~~~
-/home/dcuser
+/home/gea_user
 ~~~
 {: .output}
 
 This is the full name of your home directory. This tells you that you
-are in a directory called `dcuser`, which sits inside a directory called
+are in a directory called `gea_user`, which sits inside a directory called
 `home` which sits inside the very top directory in the hierarchy. The
 very top of the hierarchy is a directory called `/` which is usually
-referred to as the *root directory*. So, to summarize: `dcuser` is a
+referred to as the *root directory*. So, to summarize: `gea_user` is a
 directory in `home` which is a directory in `/`.
 
 Now enter the following command:
 
 ~~~
-$ cd /home/dcuser/shell_data/.hidden
+$ cd /home/gea_user/data/shell_data/.hidden
 ~~~
 {: .bash}
 
@@ -255,7 +256,7 @@ $ cd
 You can also navigate to the `.hidden` directory using:
 
 ~~~
-$ cd shell_data/.hidden
+$ cd data/shell_data/.hidden
 ~~~
 {: .bash}
 
