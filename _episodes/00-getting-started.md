@@ -63,15 +63,15 @@ exercises.
 
 After logging in, you will see a screen showing showing three different services we can utilize.
 
-![Image of CyVerse User Portal](./myimages/cyverseoptions.png)
+![Image of CyVerse User Portal](../img/cyverseoptions.png)
 
 Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to login again utilizing the same information you just used to create your CyVerse account. Follow the onscreen prompts until you reach a screen that looks like this.
 
-![Image of Discovery Environment Entry page](https://github.com/kbieser/shell-genomics/blob/gh-pages/_episodes/myimages/deentry.png)
+![Image of Discovery Environment Entry page](../img/deentry.png)
 
 Once you reach the CyVerse Discovery Environment display, click on the _Apps_ button. I will need to add you to our class team, but once added search for _DataCarpentry_Bieser_ and click _Launch Analysis_. Once you launch the _App_ you need to go back and click on the _Analyses_ button. The app you launched should appear. Move your mouse over the square with the arrow which will say _Go to analysis_ and click it. This next step can take some time especially if you are the first to launch the app that day. Be patient. When the app has loaded you should see this page which lets you know you have successfully launched the app.
 
-![Image of JupyterLab Entry page](https://github.com/kbieser/shell-genomics/blob/gh-pages/_episodes/myimages/jupyterentry.png)
+![Image of JupyterLab Entry page](../img/jupyterentry.png)
 
 The last step is to click the _Terminal_ button on the bottom left under _Other_. If possible, complete these steps to launch your app everyday before class starts. This will enable us to use our class time most effectively.
 
@@ -79,7 +79,7 @@ The last step is to click the _Terminal_ button on the bottom left under _Other_
 
 After a few lessons, we will want to save our work from one class to the next. To do this, a _Data Persistence Jupyter notebook_ was created. At the beginning of every class, you will want to open this notebook. To do so, first click the small _data_ link and then click on _Peristence_Notebook-KB.ipynb_ which will open a new tab that is the notebook. This notebook contains commands that will allow us to save data if we run then properly.
 
-![Image of Data Persistence Jupyter Notebook](_episodes/myimages/datapersistence.png)
+![Image of Data Persistence Jupyter Notebook](../img/datapersistence.png)
 
 A Jupyter notebook functions much like a terminal. Each section of commands is run in a cell. For our notebook, there are 2 cells that will need to be run. The first cell creates a directory so that each student will save their own data to their username. The first cell must be run at the beginning of each class. You run a cell by clicking in the cell and hitting the play button at the top of the notebook. After hitting play, switch to your terminal. Continue to follow the directions in the notebook until you reach cell 2.
 
