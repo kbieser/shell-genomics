@@ -25,8 +25,3 @@ There are quite a few reasons to start learning about the shell:
 > to log-in to CyVerse and the Vice app. 
 {: .prereq}
 
-> ## For Instructors
->
-> If you are teaching this lesson in a workshop, please see the 
-> [Instructor notes](./guide/index.html).
-{: .prereq}
