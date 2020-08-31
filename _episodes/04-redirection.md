@@ -302,29 +302,6 @@ $ wc -l bad_reads.txt
 ~~~
 {: .output}
 
-> ## File extensions - part 2
->
-> This is where we would have trouble if we were naming our output file with a `.fastq` extension.
-> If we already had a file called `bad_reads.fastq` (from our previous `grep` practice)
-> and then ran the command above using a `.fastq` extension instead of a `.txt` extension, `grep`
-> would give us a warning.
->
-> ~~~
-> grep -B1 -A2 NNNNNNNNNN *.fastq > bad_reads.fastq
-> ~~~
-> {: .bash}
->
-> ~~~
-> grep: input file ‘bad_reads.fastq’ is also the output
-> ~~~
-> {: .output}
->
-> `grep` is letting you know that the output file `bad_reads.fastq` is also included in your
-> `grep` call because it matches the `*.fastq` pattern. Be careful with this as it can lead to
-> some unintended results.
->
-{: .callout}
-
 Since we might have multiple different criteria we want to search for,
 creating a new output file each time has the potential to clutter up our workspace. We also
 thus far haven't been interested in the actual contents of those files, only in the number of
@@ -389,7 +366,7 @@ lines matching the pattern, and indicate groups of lines which did not match the
 To fix this issue, we can redirect the output of grep to a second instance of `grep` as follows.
 
 ~~~
-$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq | grep -v '^--' > bad_reads.fastq
+$ grep -B1 -A2 NNNNNNNNNN SRR098026.fastq | grep -v '^--' > bad_reads.txt
 ~~~
 {: .bash}
 
@@ -561,7 +538,7 @@ One way this is really useful is to move files. Let's rename all of our .txt fil
 $ for filename in *.txt
 > do
 > name=$(basename ${filename} .txt)
-> mv ${filename}  ${name}_2019.txt
+> mv ${filename}  ${name}_2020.txt
 > done
 ~~~
 {: .bash}
@@ -569,15 +546,15 @@ $ for filename in *.txt
 
 > ## Exercise
 >
-> Remove `_2019` from all of the `.txt` files.
+> Remove `_2020` from all of the `.txt` files.
 >
 >> ## Solution
 >>  
 >>
 >> ~~~
->> $ for filename in *_2019.txt
+>> $ for filename in *_2020.txt
 >> > do
->> > name=$(basename ${filename} _2019.txt)
+>> > name=$(basename ${filename} _2020.txt)
 >> > mv ${filename} ${name}.txt
 >> > done
 >> ~~~
