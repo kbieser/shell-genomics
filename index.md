@@ -20,7 +20,15 @@ There are quite a few reasons to start learning about the shell:
 > including the
 > concept of genomic variation within a population. Participants should bring their laptops and plan to participate actively.
 >
+<<<<<<< HEAD
 > This lesson is part of a workshop that uses data hosted on CyVerse. Workshop participants will be given
 > information on how
 > to log-in to CyVerse and the Vice app.
 {: .prereq}
+=======
+> This lesson is part of a workshop that uses data hosted on CyVerse. Students will be given 
+> information on how
+> to log-in to CyVerse and the Vice app. 
+{: .prereq}
+
+>>>>>>> 046a0deaf128fd091269f905fde9c41d8d64cbc9
