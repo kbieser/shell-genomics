@@ -133,11 +133,11 @@ $ cd data
 {: .bash}
 
 ~~~
-Persistence_Notebook-KB.ipynb  shell_data
+Persistence_Notebook-KB_3.ipynb  shell_data
 ~~~
 {: .output}
 
-We'll be working within the `shell_data` subdirectory, and creating new subdirectories, throughout this class. We will use the `Persistence_Notebook-KB.ipynb` to save our work from class to class which was introduced in the getting started lesson.   
+We'll be working within the `shell_data` subdirectory, and creating new subdirectories, throughout this class. We will use the `Persistence_Notebook-KB_3.ipynb` to save our work from class to class which was introduced in the getting started lesson.   
 
 For now, let's navigate to the `shell_data` directory we saw above.  We can
 use the following command to get there:
