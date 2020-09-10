@@ -1,7 +1,7 @@
 ---
 title: "Writing Scripts and Working with Data"
-teaching: 20
-exercises: 20
+teaching: 0
+exercises: 0
 questions:
 - How can we automate a commonly used set of commands?
 objectives:
@@ -39,22 +39,22 @@ window.onload = set_page_view_defaults;
 
 We've been able to do a lot of work with files that already exist, but what if we want to write our own files? We're not going to type in a FASTA file, but we'll see as we go through other tutorials, there are a lot of reasons we'll want to write a file, or edit an existing file.
 
-To add text to files, we're going to use a text editor called Nano. We're going to create a file to take notes about what we've been doing with the data files in `~/shell_data/untrimmed_fastq`.
+To add text to files, we're going to use a text editor called Nano. We're going to create a file to take notes about what we've been doing with the data files in `~/data/shell_data/untrimmed_fastq`.
 
 This is good practice when working in bioinformatics. We can create a file called `README.txt` that describes the data files in the directory or documents how the files in that directory were generated.  As the name suggests, it's a file that we or others should read to understand the information in that directory.
 
-Let's change our working directory to `~/shell_data/untrimmed_fastq` using `cd`,
+Let's change our working directory to `~/data/shell_data/untrimmed_fastq` using `cd`,
 then run `nano` to create a file called `README.txt`:
 
 ~~~
-$ cd ~/shell_data/untrimmed_fastq
+$ cd ~data/shell_data/untrimmed_fastq
 $ nano README.txt
 ~~~
 {: .bash}
 
-You should see something like this: 
+You should see something like this:
 
-![nano201711.png](../img/nano201711.png)
+![nano.png](../img/nano.png)
 
 The text at the bottom of the screen shows the keyboard shortcuts for performing various tasks in `nano`. We will talk more about how to interpret this information soon.
 
@@ -62,17 +62,17 @@ The text at the bottom of the screen shows the keyboard shortcuts for performing
 >
 > When we say, "`nano` is a text editor," we really do mean "text": it can
 > only work with plain character data, not tables, images, or any other
-> human-friendly media. We use it in examples because it is one of the 
-> least complex text editors. However, because of this trait, it may 
+> human-friendly media. We use it in examples because it is one of the
+> least complex text editors. However, because of this trait, it may
 > not be powerful enough or flexible enough for the work you need to do
 > after this workshop. On Unix systems (such as Linux and Mac OS X),
 > many programmers use [Emacs](http://www.gnu.org/software/emacs/) or
-> [Vim](http://www.vim.org/) (both of which require more time to learn), 
+> [Vim](http://www.vim.org/) (both of which require more time to learn),
 > or a graphical editor such as
 > [Gedit](http://projects.gnome.org/gedit/). On Windows, you may wish to
-> use [Notepad++](http://notepad-plus-plus.org/).  Windows also has a built-in
+> use [Notepad++](http://notepad-plus-plus.org/). Windows also has a built-in
 > editor called `notepad` that can be run from the command line in the same
-> way as `nano` for the purposes of this lesson.  
+> way as `nano` for the purposes of this lesson. Another text editor that I find user friendly is [Atom](https://atom.io/).
 >
 > No matter what editor you use, you will need to know where it searches
 > for and saves files. If you start it from the shell, it will (probably)
@@ -114,10 +114,10 @@ Now you've written a file. You can take a look at it with `less` or `cat`, or op
 
 > ## Exercise
 >
-> Open `README.txt` and add the date to the top of the file and save the file. 
+> Open `README.txt` and add the date to the top of the file and save the file.
 >
 > > ## Solution
-> > 
+> >
 > > Use `nano README.txt` to open the file.  
 > > Add today's date and then use <kbd>Ctrl</kbd>-<kbd>X</kbd> followed by `y` and <kbd>Enter</kbd> to save.
 > >
@@ -147,9 +147,9 @@ grep -B1 -A2 -h NNNNNNNNNN *.fastq | grep -v '^--' > scripted_bad_reads.txt
 
 > ## Custom `grep` control
 >
-> We introduced the `-v` option in [the previous episode](http://www.datacarpentry.org/shell-genomics/04-redirection/), now we 
+> We introduced the `-v` option in [the previous episode](http://www.datacarpentry.org/shell-genomics/04-redirection/), now we
 > are using `-h` to "Suppress the prefixing of file names on output" according to the documentation shown by `man grep`.
-> 
+>
 {: .callout}
 
 Type your `grep` command into the file and save it as before. Be careful that you did not add the `$` at the beginning of the line.
@@ -171,7 +171,7 @@ It will look like nothing happened, but now if you look at `scripted_bad_reads.t
 > 2. Run the updated script.
 >
 > > ## Solution
-> > 
+> >
 > >    ```
 > >   $ bash bad-reads-script.sh
 > >   Script finished!
@@ -182,7 +182,7 @@ It will look like nothing happened, but now if you look at `scripted_bad_reads.t
 
 ## Making the script into a program
 
-We had to type `bash` because we needed to tell the computer what program to use to run this script. Instead, we can turn this script into its own program. We need to tell it that it's a program by making it executable. We can do this by changing the file permissions. We talked about permissions in [an earlier episode](http://www.datacarpentry.org/shell-genomics/03-working-with-files/).
+We had to type `bash` because we needed to tell the computer what program to use to run this script. Instead, we can turn this script into its own program. We need to tell it that it's a program by making it executable. We can do this by changing the file permissions. We talked about permissions in [an earlier episode, Working with Files](https://kbieser.github.io/shell-genomics/03-working-with-files/index.html).
 
 First, let's look at the current permissions.
 
@@ -192,7 +192,7 @@ $ ls -l bad-reads-script.sh
 {: .bash}
 
 ~~~
--rw-rw-r-- 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
+-rw-r--r-- 1 gea_user gea_user 100 Sep 10 21:46 bad-reads-script.sh
 ~~~
 {: .output}
 
@@ -211,7 +211,7 @@ $ ls -l bad-reads-script.sh
 {: .bash}
 
 ~~~
--rwxrwxr-x 1 dcuser dcuser 0 Oct 25 21:46 bad-reads-script.sh
+-rwxr-xr-x 1 gea_user gea_user 100 Sep 10 21:46 bad-reads-script.sh
 ~~~
 {: .output}
 
@@ -229,7 +229,7 @@ You will learn more about writing scripts in [a later lesson](https://datacarpen
 ## Moving and Downloading Data
 
 So far, we've worked with data that is pre-loaded on the instance in the cloud. Usually, however,
-most analyses begin with moving data onto the instance. Below we'll show you some commands to 
+most analyses begin with moving data onto the instance. Below we'll show you some commands to
 download data onto your instance, or to move data between your computer and the cloud.
 
 ### Getting data from the cloud
@@ -253,7 +253,7 @@ tab-delimited file that just tells us what data is available on the Ensembl bact
 Before we can start our download, we need to know whether we're using ``curl`` or ``wget``.
 
 To see which program you have, type:
- 
+
 ~~~
 $ which curl
 $ which wget
@@ -265,7 +265,7 @@ installed, and tells you what folder it is installed to. If it can't
 find the program you asked for, it returns nothing, i.e. gives you no
 results.
 
-On Mac OSX, you'll likely get the following output:
+In the Jupyter app, you'll likely get the following output:
 
 ~~~
 $ which curl
@@ -273,7 +273,7 @@ $ which curl
 {: .bash}
 
 ~~~
-/usr/bin/curl
+/opt/conda/bin/curl
 ~~~
 {: .output}
 
@@ -283,11 +283,11 @@ $ which wget
 {: .bash}
 
 ~~~
-$
+/usr/bin/wget
 ~~~
 {: .output}
 
-This output means that you have ``curl`` installed, but not ``wget``.
+This output means that you have ``curl`` and ``wget`` installed.
 
 Once you know whether you have ``curl`` or ``wget``, use one of the
 following commands to download the file:
@@ -312,8 +312,8 @@ download the page instead of showing it to us **and** specifies that it should s
 file using the same name it had on the server: species_EnsemblBacteria.txt
 
 It's important to note that both ``curl`` and ``wget`` download to the computer that the
-command line belongs to. So, if you are logged into AWS on the command line and execute
-the ``curl`` command above in the AWS terminal, the file will be downloaded to your AWS
+command line belongs to. So, if you are logged into the Jupyter app on the command line and execute
+the ``curl`` command above in the Jupyter app, the file will be downloaded to your Jupyter
 machine, not your local one.
 
 ### Moving files between your laptop and your instance
@@ -324,111 +324,8 @@ to start the transfer locally. **This means if you're typing into a terminal, th
 should not be logged into your instance, it should be showing your local computer. If you're
 using a transfer program, it needs to be installed on your local machine, not your instance.**
 
-## Transferring Data Between your Local Machine and the Cloud
+## Transferring Data Between your Local Machine and the Jupyter app
 
-These directions are platform specific, so please follow the instructions for your system:
-
-**Please select the platform you wish to use for the exercises: <select id="id_platform" name="platformlist" onchange="change_content_by_platform('id_platform');return false;"><option value="unix" id="id_unix" selected> UNIX </option><option value="win" id="id_win" selected> Windows </option></select>**
-
-
-
-<div id="div_unix" style="display:block" markdown="1">
-
-### Uploading Data to your Virtual Machine with scp
-
-`scp` stands for 'secure copy protocol', and is a widely used UNIX tool for moving files
-between computers. The simplest way to use `scp` is to run it in your local terminal,
-and use it to copy a single file:
-
-~~~
-scp <file I want to move> <where I want to move it>
-~~~
-{: .bash}
-
-Note that you are always running `scp` locally, but that *doesn't* mean that
-you can only move files from your local computer. In order to move a file from your local computer to an AWS instance, the command would look like this:
-
-~~~
-$ scp <local file> <AWS instance>
-~~~
-{: .bash}
-
-To move it back to your local computer, you re-order the `to` and `from` fields:
-
-~~~
-$ scp <AWS instance> <local file>
-~~~
-{: .bash}
-
-#### Uploading Data to your Virtual Machine with scp
-
-Open the terminal and use the `scp` command to upload a file (e.g. local_file.txt) to the dcuser home directory:
-
-~~~
-$  scp local_file.txt dcuser@ip.address:/home/dcuser/
-~~~
-{: .bash}
-
-#### Downloading Data from your Virtual Machine with scp
-
-Let's download a text file from our remote machine. You should have a file that contains bad reads called ~/shell_data/scripted_bad_reads.txt.
-
-**Tip:** If you are looking for another (or any really) text file in your home directory to use instead, try:
-
-~~~
-$ find ~ -name *.txt
-~~~
-{: .bash}
-
-
-Download the bad reads file in ~/shell_data/scripted_bad_reads.txt to your home ~/Download directory using the following command **(make sure you substitute dcuser@ip.address with your remote login credentials)**:
-
-~~~
-$ scp dcuser@ip.address:/home/dcuser/shell_data/untrimmed_fastq/scripted_bad_reads.txt ~/Downloads
-~~~
-{: .bash}
-
-Remember that in both instances, the command is run from your local machine, we've just flipped the order of the to and from parts of the command.
-</div>
-
-
-<div id="div_win" style="display:block" markdown="1">
-
-### Uploading Data to your Virtual Machine with PSCP
-
-If you're using a PC, we recommend you use the *PSCP* program. This program is from the same suite of
-tools as the PuTTY program we have been using to connect.
-
-1. If you haven't done so, download pscp from [http://the.earth.li/~sgtatham/putty/latest/x86/pscp.exe](http://the.earth.li/~sgtatham/putty/latest/x86/pscp.exe)
-2. Make sure the *PSCP* program is somewhere you know on your computer. In this case,
-your Downloads folder is appropriate.
-3. Open the windows [PowerShell](https://en.wikipedia.org/wiki/Windows_PowerShell);
-go to your start menu/search enter the term **'cmd'**; you will be able to start the shell
-(the shell should start from C:\Users\your-pc-username>).
-4. Change to the Downloads directory:
-
-~~~
-> cd Downloads
-~~~
-{: .bash}
-
-5. Locate a file on your computer that you wish to upload (be sure you know the path). Then upload it to your remote machine **(you will need to know your AMI instance address (which starts with ec2), and login credentials)**. You will be prompted to enter a password, and then your upload will begin. **(make sure you substitute 'your-pc-username' for your actual pc username and 'ec2-54-88-126-85.compute-1.amazonaws.com' with your AMI instance address)**
-
-~~~
-C:\User\your-pc-username\Downloads> pscp.exe local_file.txt dcuser@ec2-54-88-126-85.compute-1.amazonaws.com:/home/dcuser/
-~~~
-{: .bash}
-
-### Downloading Data from your Virtual Machine with PSCP
-
-1. Follow the instructions in the Upload section to download (if needed) and access the *PSCP* program (steps 1-3)
-2. Download the text file using the following command **(make sure you substitute 'your-pc-username' for your actual pc username and 'ec2-54-88-126-85.compute-1.amazonaws.com' with your AMI instance address)**
-
-~~~
-C:\User\your-pc-username\Downloads> pscp.exe dcuser@ec2-54-88-126-85.compute-1.amazonaws.com:/home/dcuser/shell_data/untrimmed_fastq/scripted_bad_reads.txt.
-
-C:\User\your-pc-username\Downloads
-~~~
-{: .bash}
+We will not be uploading data from our local machine. All data and functionality has been completely built into our app. If using a different server, search for platform specific instructions for your system.
 
 </div>
