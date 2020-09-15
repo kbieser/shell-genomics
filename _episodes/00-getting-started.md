@@ -69,9 +69,11 @@ Click on _LAUNCH_ for the Discovery Environment. This screen will ask you to log
 
 ![Image of Discovery Environment Entry page](../img/deentry.png)
 
-Once you reach the CyVerse Discovery Environment display, click on the _Apps_ button. I will need to add you to our class team, but once added search for _DataCarpentry_Bieser_ and click _Launch Analysis_. Once you launch the _App_ you need to go back and click on the _Analyses_ button. The app you launched should appear. Move your mouse over the square with the arrow which will say _Go to analysis_ and click it.
+Once you reach the CyVerse Discovery Environment display, click on the _Apps_ button. In the search bar, you will type _DataCarpentry_Bieser_ and click on the app text. This will open a second window. On the bottom right corner, click _Launch Analysis_. This will launch the app, but we need to launch the analyses. Return to the Discovery Environment landing page and click on the _Analyses_ button. The app you launched should appear. Move your mouse over the square with the arrow which will say _Go to analysis_ and click it.
 
-![Image of Discovery Environment App and Anaylses](../img/applaunch.png)
+![Image of Discovery Environment App and Anaylses](../img/Cyverse_app.png)
+
+![Image of Launching Analyses](../img/Launch_Analyses.png)
 
 This next step can take some time especially if you are the first to launch the app that day. Be patient. When the app has loaded you should see this page which lets you know you have successfully launched the app.
 
@@ -81,39 +83,12 @@ The last step is to click the _Terminal_ button on the bottom left under _Other_
 
 ## Data Persistence
 
-After a few lessons, we will want to save our work from one class to the next. To do this, a _Data Persistence Jupyter notebook_ was created. At the beginning of every class, you will want to open this notebook. To do so, first click the small _data_ link and then click on _Peristence_Notebook-KB.ipynb_ which will open a new tab that is the notebook. This notebook contains commands that will allow us to save data if we run then properly.
+After a few lessons, we will want to save our work from one class to the next. To do this, a _Data Persistence Jupyter notebook_ was created. At the beginning of every class, you will want to open this notebook. To do so, first click the small _data_ link and then click on _Peristence_Notebook-KB.ipynb_ which will open a new tab that is the notebook. This notebook contains commands that will allow us to save your work from one class to the next.
 
-![Image of Data Persistence Jupyter Notebook](../img/datapersistence.png)
+![Image of Data Persistence Jupyter Notebook](../img/persistence_notebook.png)
 
-A Jupyter notebook functions much like a terminal. Each section of commands is run in a cell. For our notebook, there are 2 cells that will need to be run. The first cell creates a directory so that each student will save their own data to their username. The first cell must be run at the beginning of each class. You run a cell by clicking in the cell and hitting the play button at the top of the notebook. After hitting play, switch to your terminal. Continue to follow the directions in the notebook until you reach cell 2.
-
-~~~
-$ iinit
-~~~
-{: .bash}
-
-This command should generate an irods password prompt.
-
-~~~
-Enter your current iRODS password:
-~~~
-{: .output}
-
-Type the same password you used to login into CyVerse and the Discovery Environment. The password will remain hidden while you are typing. When finished hit enter. If your password is accepted, the terminal will return to the normal command prompt. If you receive an error. Try again from the `iinit` command.
-
-Return to the notebook and his the save button. We will continue with class and return to the notebook at the end of each class.
-
-At the end of class, return to the notebook and click in cell 2. Hit the _play_ button.
-
-If successful you should see this output. Initially the brackets will contain an _*_, but when the save is completed, you will see a number appear in the brackets. This tells you your session has been saved and it is safe to close your session.
-
-~~~
-Running recursive pre-scan... pre-scan complete... transferring data...
-~~~
-{: .output}
+A Jupyter notebook functions much like a terminal. Each section of commands is run in a cell. For our notebook, there are 2 cells that will need to be run. The first cell creates a directory so that each student will save their own data to their username. The first cell must be run at the beginning of each class. You run a cell by clicking in the cell (#1 in the image) and hitting the play button at the top of the notebook (#2 in the image). A promt for your CyVerse password will appear and if you don't receive an error message it will be saved for this session. Once your password is entered, switch to your terminal until the end of a session. At the end of a session, you will return to the notebook and play cell 2 which will save your work. Initially the brackets will contain an _*_, but when the save is completed, you will see a number appear in the brackets. This tells you your session has been saved and it is safe to close your session.
 
 You can leave the app running for 48 hours at which point it will automatically be cancelled. For safety, return to Analyses where you launched the app, and click on the three dots to the right of the _Running_ icon. Click on _Complete and Save Outputs_. This saves the session and will allow you to relaunch from your data each subsequent session.
 
 ![Image of saving session after class](../img/closesession.png)
-
-## Launching the app after a Data Persistence save
