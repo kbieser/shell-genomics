@@ -293,7 +293,7 @@ Once you know whether you have ``curl`` or ``wget``, use one of the
 following commands to download the file:
 
 ~~~
-$ cd
+$ cd data/
 $ wget ftp://ftp.ensemblgenomes.org/pub/release-37/bacteria/species_EnsemblBacteria.txt
 ~~~
 {: .bash}
