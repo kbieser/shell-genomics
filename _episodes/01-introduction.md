@@ -50,7 +50,11 @@ In this lesson you will learn how to use the command line interface to move arou
 
 ## How to access the shell
 
-Login into CyVerse and launch the DataCarpenty_Bieser app. Open the Persistence_Notebook, run the first cell, and login to irods prior to beginning any work.
+Login into CyVerse and navigate to the _DataCarpenty_Bieser_ app. For every session from now on, you will want to launch the app from your own username/data. Since we ran the _Persistence_Notebook_ in the previous lesson, you will have a new folder _data_. To launch the app from your username: 1) Click on the app to open the first window 2) Click on the tab that says _Data Set_ 3) Click on _Browse_ which will open a new window 4) Click the folder with your username 5) Click on the folder titled _data_ 6) Click _OK_ and launch the app. **You will launch the app this way for the entire semester.**
+
+You are now ready to start using the command shell! Once the app is launched, run cell 1 of your _Persistance_Notebook_ and then launch the terminal. You are now ready for the lesson. 
+
+![Image of CyVerse User Portal](../img/launchingapp.png)
 
 ## Navigating your file system
 
